@@ -1,0 +1,45 @@
+.example-form {
+  min-width: 170px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+td {
+  padding-right: 8px;
+}
+.NewUser{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.common-button {
+  width: 104px;
+  height: 38px;
+  border-radius: 10px;
+  &.empty {
+    background-color: white;
+    color: $primary;
+    border: $primary 1px solid;
+  }
+  &.filled {
+    background-color: $primary;
+    color: white;
+  }
+}
+.gap {
+  margin-right: 1em;
+}
+
+.button {
+  text-align: right;
+  margin-top: 2em;
+  button {
+    margin-bottom: 1em;
+  }
+}
+
+

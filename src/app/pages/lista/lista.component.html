@@ -1,0 +1,40 @@
+<div class="bg-light">
+  <a class="navbar-brand center" href="#">Lista</a>
+</div>
+<div class="container">
+
+
+  <div class="form-group mb-2">
+    <input type="text" class="form-control mr-2" placeholder="buscar" [(ngModel)]="filtroLista">
+  </div>
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">E-mail</th>
+        <th scope="col">CPF</th>
+        <th scope="col">Criado em</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let list of cadastroFiltrados">
+        <td>{{list.name}}</td>
+        <td>{{list.email}}</td>
+        <td>{{list.cpf}}</td>
+        <td>{{'10/10/2023'}}</td>
+        <td>
+          <mat-icon matTooltip="Editar Registro">
+            edit</mat-icon>
+            <a (click)="delete(list.id)"><mat-icon  matTooltip="Excluir Registro">
+              delete sweep icon
+            </mat-icon></a>
+            <a routerLink="cadastro">
+              <mat-icon>add_circle</mat-icon>
+            </a>
+        </td>
+      </tr>
+    </tbody>
+
+  </table>
+</div>

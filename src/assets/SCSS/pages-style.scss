@@ -1,0 +1,76 @@
+.common-button {
+  width: 134px;
+  height: 48px;
+  border-radius: 10px;
+  margin-top: 2em;
+  margin-left: 1em;
+  &.empty {
+    background-color: white;
+    color: $primary;
+    border: $primary 1px solid;
+  }
+}
+
+.gap {
+  margin-right: 1em;
+}
+
+.table-wrapper {
+  width: 99%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.8em;
+
+table {
+  margin-top: 2%;
+  width: 100%;
+
+}
+
+.play {
+  color: blue;
+}
+
+.cancel {
+  color: red;
+}
+
+.search {
+  color: green;
+}
+
+.gap {
+  margin-right: 0.5em;
+}
+
+}
+
+
+.home{
+  margin-top: 2em;
+  margin-left: 1em;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+
+.container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.pesquisar{
+  margin-top: 2em;
+  margin-right: 2em;
+}
+
+.title{
+  margin-left: 1em;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+

@@ -1,0 +1,121 @@
+<div class="">
+
+  <div class="bg-light">
+    <a class="navbar-brand center" href="#">Cadastro</a>
+  </div>
+
+  <form [formGroup]="form" class="container">
+
+
+
+    <div class="form-group col-md-8">
+      <label for="inputNome">Nome</label>
+      <input type="text" class="form-control is-invalid"
+      [ngClass]="{'is-invalid' : f.nome.errors && f.nome.touched}"
+      formControlName="nome" placeholder="Digite seu nome">
+      <div class="invalid-feedback">
+        Nome é obrigatorio
+      </div>
+    </div>
+
+    <div class="form-group col-md-8">
+      <label for="inputEmail">Email</label>
+      <input type="text" class="form-control" formControlName="email" placeholder="Digite seu email">
+    </div>
+
+    <div class="form-group col-md-8">
+      <label for="inputAddress">CPF</label>
+      <input type="text" class="form-control" formControlName="cpf" placeholder="Digite seu nome">
+    </div>
+
+    <div class="form-row col-md-12">
+      <div class="form-group col-md-4">
+        <label for="inputEmail4">Endereço</label>
+        <input type="email" class="form-control" formControlName="endereco">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="inputState">Estado</label>
+        <select formControlName="estado" class="form-control">
+          <option selected></option>
+          <option value="Ceara">Ceara</option>
+          <option value="Natal">Natal</option>
+          <option value="Crateus">Crateus</option>
+          <option value="Jeri">Jeri</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-row col-md-12">
+      <div class="form-group col-md-4">
+        <label for="inputEmail4">Cep</label>
+        <input type="email" class="form-control" formControlName="cep">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="inputState">Cidade</label>
+        <select formControlName="cidade" class="form-control">
+          <option selected></option>
+          <option value="Fortaleza">Fortaleza</option>
+          <option value="Quixada">Quixada</option>
+          <option value="Crateus">Crateus</option>
+          <option value="Jeri">Jeri</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-row col-md-12">
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+        <label class="form-check-label" for="inlineRadio1">Cartão de Crédito</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+        <label class="form-check-label" for="inlineRadio2">Boleto Bancario</label>
+      </div>
+    </div>
+
+    <div class="form-row col-md-12 container">
+      <div class="form-group col-md-4">
+        <label for="inputCity">Nome do cartão</label>
+        <input type="text" class="form-control" formControlName="nomeCartao" placeholder="Nome impresso no cartão">
+      </div>
+      <div class="form-group col-md-2">
+        <label for="inputState">Data de Expiração</label>
+        <select formControlName="dataMes" class="form-control">
+          <option selected></option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+      <div class="form-group col-md-2">
+        <label for="inputState">Ano</label>
+        <select formControlName="dataAno" class="form-control">
+          <option selected></option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row col-md-12">
+      <div class="form-group col-md-4">
+        <label for="inputEmail4">Número do Cartão</label>
+        <input type="email" class="form-control" formControlName="numeroCartao" placeholder="Número do Cartão">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="inputPassword4">Código de Segurança</label>
+        <input type="text" class="form-control" formControlName="codigoSeguranca" placeholder="Código de Segurança">
+      </div>
+    </div>
+    <div class="col-md-12">
+      <h3>Seu cartão será debitado em R$ 49,00</h3>
+      <button type="submit" class="btn btn-primary" (click)="salvarAlteracao()">REALIZAR MATRÍCULA</button>
+      <h5>Informações seguras e criptografadas</h5>
+    </div>
+  </form>
+</div>
+
